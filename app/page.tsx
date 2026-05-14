@@ -24,12 +24,22 @@ export default function HomePage() {
               </p>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-foreground mb-4">Destinations</h4>
+              <h4 className="text-sm font-semibold text-foreground mb-4">Cote d&apos;Azur</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Côte d&apos;Azur</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Corse</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Baléares</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Croatie</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Port de Nice</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Port de Cannes</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Port de Saint-Tropez</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Port de Monaco</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Port d&apos;Antibes</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-foreground mb-4">Mediterranee</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-primary transition-colors">Port de Marseille</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Port de Bonifacio</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Port d&apos;Ajaccio</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Port de Portofino</a></li>
               </ul>
             </div>
             <div>

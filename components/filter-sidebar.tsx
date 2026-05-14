@@ -30,7 +30,30 @@ interface FilterSidebarProps {
 }
 
 const boatTypes = ["Yacht", "Voilier", "Catamaran", "Hors-bord", "Semi-rigide"]
-const locations = ["Côte d'Azur", "Corse", "Baléares", "Sardaigne", "Croatie", "Grèce"]
+
+// Ports de la Côte d'Azur et Méditerranée
+const locations = [
+  // Côte d'Azur
+  "Port de Nice",
+  "Port de Cannes",
+  "Port de Saint-Tropez",
+  "Port de Monaco",
+  "Port d'Antibes",
+  "Port de Villefranche",
+  // Provence
+  "Port de Marseille",
+  "Port de Cassis",
+  "Port de Toulon",
+  "Port de Bandol",
+  // Corse
+  "Port d'Ajaccio",
+  "Port de Bonifacio",
+  "Port de Calvi",
+  "Port de Bastia",
+  // Italie
+  "Port de Portofino",
+  "Port de San Remo",
+]
 
 export function FilterSidebar({ filters, onFilterChange, onReset }: FilterSidebarProps) {
   const updateFilter = <K extends keyof Filters>(key: K, value: Filters[K]) => {
