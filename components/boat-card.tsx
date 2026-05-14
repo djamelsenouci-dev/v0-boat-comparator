@@ -20,6 +20,7 @@ export interface Boat {
   location: string
   features: string[]
   rating: number
+  sansPermis: boolean
   isSelected?: boolean
 }
 
@@ -71,6 +72,13 @@ export function BoatCard({ boat, onSelect, onCompare, isComparing, index }: Boat
           <Badge className="absolute top-3 left-3 bg-primary/90 text-primary-foreground backdrop-blur-sm">
             {boat.type}
           </Badge>
+          
+          {/* Sans Permis badge */}
+          {boat.sansPermis && (
+            <Badge className="absolute top-12 left-3 bg-emerald-600/90 text-white backdrop-blur-sm">
+              Sans Permis
+            </Badge>
+          )}
           
           {/* Rating */}
           <div className="absolute bottom-3 left-3 flex items-center gap-1 rounded-full bg-background/80 px-2 py-1 backdrop-blur-sm">
