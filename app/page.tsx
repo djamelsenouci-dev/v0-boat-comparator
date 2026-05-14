@@ -56,8 +56,8 @@ export default function HomePage() {
               <h4 className="text-sm font-semibold text-foreground mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>contact@umiheisen.fr</li>
-                {/*<li>+33 4 93 00 00 00</li>*/}
-                <li>Port de Nice, France</li>
+                {/* <li>+33 4 93 00 00 00</li>
+                <li>Port de Nice, France</li> */}
               </ul>
             </div>
           </div>
