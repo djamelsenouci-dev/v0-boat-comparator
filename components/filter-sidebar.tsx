@@ -29,7 +29,7 @@ interface FilterSidebarProps {
   onReset: () => void
 }
 
-const boatTypes = ["Yacht", "Voilier", "Catamaran", "Hors-bord", "Semi-rigide"]
+const boatTypes = ["Yacht", "Voilier", "Catamaran", "Hors-bord", "Semi-rigide", "Sans-Permis"]
 
 // Ports de la Côte d'Azur et Méditerranée
 const locations = [
