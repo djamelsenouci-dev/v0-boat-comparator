@@ -14,44 +14,52 @@ function UmiheisenLogo({ className }: { className?: string }) {
       className={className}
     >
       <defs>
+        {/* Fond sombre */}
         <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" style={{ stopColor: "#0d0f0e", stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: "#080909", stopOpacity: 1 }} />
+          <stop offset="0%" style={{ stopColor: "#0d1b2a", stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: "#060d15", stopOpacity: 1 }} />
         </radialGradient>
+        {/* Cercle exterieur gradient or */}
         <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style={{ stopColor: "#c8a96e", stopOpacity: 1 }} />
           <stop offset="50%" style={{ stopColor: "#f0d080", stopOpacity: 1 }} />
           <stop offset="100%" style={{ stopColor: "#a07840", stopOpacity: 1 }} />
         </linearGradient>
+        {/* Vagues gradient bleu */}
         <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: "#8b7355", stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: "#c8a96e", stopOpacity: 1 }} />
+          <stop offset="0%" style={{ stopColor: "#1a4a7a", stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: "#2a6aaa", stopOpacity: 1 }} />
         </linearGradient>
         <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: "#6b5a42", stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: "#a08050", stopOpacity: 1 }} />
+          <stop offset="0%" style={{ stopColor: "#1e5588", stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: "#3a7abf", stopOpacity: 1 }} />
         </linearGradient>
         <linearGradient id="waveGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style={{ stopColor: "#4a3f30", stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: "#7a6548", stopOpacity: 1 }} />
+          <stop offset="0%" style={{ stopColor: "#163d64", stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: "#2a5f94", stopOpacity: 1 }} />
         </linearGradient>
+        {/* Soleil/Lune gradient chaud */}
         <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
           <stop offset="0%" style={{ stopColor: "#fff8e0", stopOpacity: 1 }} />
           <stop offset="40%" style={{ stopColor: "#ffd060", stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: "#c8a96e", stopOpacity: 0 }} />
+          <stop offset="100%" style={{ stopColor: "#ff9020", stopOpacity: 0 }} />
         </radialGradient>
+        {/* Halo soleil */}
         <radialGradient id="haloGrad" cx="50%" cy="50%" r="50%">
           <stop offset="0%" style={{ stopColor: "#ffd060", stopOpacity: 0.4 }} />
-          <stop offset="100%" style={{ stopColor: "#c8a96e", stopOpacity: 0 }} />
+          <stop offset="100%" style={{ stopColor: "#ff9020", stopOpacity: 0 }} />
         </radialGradient>
+        {/* Bateau gradient */}
         <linearGradient id="boatGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style={{ stopColor: "#e8dcc8", stopOpacity: 1 }} />
-          <stop offset="50%" style={{ stopColor: "#f5f0e8", stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: "#d0c0a8", stopOpacity: 1 }} />
+          <stop offset="0%" style={{ stopColor: "#c8d8e8", stopOpacity: 1 }} />
+          <stop offset="50%" style={{ stopColor: "#e8f0f8", stopOpacity: 1 }} />
+          <stop offset="100%" style={{ stopColor: "#a0b8cc", stopOpacity: 1 }} />
         </linearGradient>
+        {/* Clip cercle */}
         <clipPath id="circleClip">
           <circle cx="130" cy="130" r="118" />
         </clipPath>
+        {/* Filtre lueur */}
         <filter id="glow">
           <feGaussianBlur stdDeviation="3" result="coloredBlur" />
           <feMerge>
@@ -69,15 +77,15 @@ function UmiheisenLogo({ className }: { className?: string }) {
       </defs>
       
       {/* Cercle principal fond sombre */}
-      <circle cx="130" cy="130" r="125" fill="#0d0f0e" />
-      {/* Cercle extérieur or */}
+      <circle cx="130" cy="130" r="125" fill="#0a1520" />
+      {/* Cercle exterieur or */}
       <circle cx="130" cy="130" r="125" fill="none" stroke="url(#circleGrad)" strokeWidth="2.5" />
-      {/* Cercle intérieur fin */}
+      {/* Cercle interieur fin */}
       <circle cx="130" cy="130" r="118" fill="none" stroke="url(#circleGrad)" strokeWidth="0.5" opacity="0.5" />
       
-      {/* Contenu clipé dans le cercle */}
+      {/* Contenu clipe dans le cercle */}
       <g clipPath="url(#circleClip)">
-        {/* Fond dégradé intérieur */}
+        {/* Fond degrade interieur */}
         <rect x="12" y="12" width="236" height="236" fill="url(#bgGrad)" />
         {/* Halo du soleil */}
         <ellipse cx="130" cy="123" rx="45" ry="35" fill="url(#haloGrad)" filter="url(#softGlow)" />
@@ -86,7 +94,7 @@ function UmiheisenLogo({ className }: { className?: string }) {
         {/* Soleil / lune */}
         <circle cx="130" cy="123" r="16" fill="url(#sunGrad)" filter="url(#glow)" />
         <circle cx="130" cy="123" r="10" fill="#fff8e0" opacity="0.9" />
-        {/* Vague 1 (arrière) */}
+        {/* Vague 1 (arriere) */}
         <path 
           d="M12 155 Q40 145 60 153 Q85 161 105 152 Q125 143 145 152 Q170 161 195 152 Q220 143 248 155 L248 170 Q220 160 195 167 Q170 175 145 166 Q125 158 105 166 Q85 175 60 167 Q40 160 12 170 Z"
           fill="url(#waveGrad3)" 
@@ -104,17 +112,17 @@ function UmiheisenLogo({ className }: { className?: string }) {
           fill="url(#waveGrad1)" 
         />
         {/* Remplissage eau bas */}
-        <rect x="12" y="183" width="236" height="70" fill="#5a4a38" />
+        <rect x="12" y="183" width="236" height="70" fill="#1a4a7a" />
         {/* Bateau - coque */}
         <path d="M45 140 L65 133 L115 133 L135 140 L130 145 L50 145 Z" fill="url(#boatGrad)" />
         {/* Bateau - superstructure */}
-        <path d="M65 133 L70 123 L100 123 L105 128 L115 133 Z" fill="#f0e8d8" />
+        <path d="M65 133 L70 123 L100 123 L105 128 L115 133 Z" fill="#d0e0f0" />
         {/* Bateau - cabine */}
-        <rect x="73" y="119" width="22" height="9" rx="2" fill="#f5f0e8" />
+        <rect x="73" y="119" width="22" height="9" rx="2" fill="#e0eaf5" />
         {/* Ligne de flottaison */}
         <line x1="48" y1="145" x2="132" y2="145" stroke="#c8a96e" strokeWidth="0.8" opacity="0.7" />
         {/* Reflet bateau sur eau */}
-        <path d="M50 147 L65 150 L115 150 L130 147" stroke="#d0c0a8" strokeWidth="0.5" fill="none" opacity="0.4" />
+        <path d="M50 147 L65 150 L115 150 L130 147" stroke="#a0c0d8" strokeWidth="0.5" fill="none" opacity="0.4" />
       </g>
     </svg>
   )
