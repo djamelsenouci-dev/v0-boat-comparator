@@ -182,9 +182,11 @@ export function Header() {
               Réserver
             </Button>
           </div>
-      */}
+  */}
+          
 
           {/* Mobile menu button */}
+    {/*
           <Button
             variant="ghost"
             size="icon"
@@ -194,8 +196,10 @@ export function Header() {
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
-
+*/}
         {/* Mobile menu */}
+
+{/*
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -216,6 +220,7 @@ export function Header() {
             </nav>
           </motion.div>
         )}
+    */}
       </div>
     </motion.header>
   )
