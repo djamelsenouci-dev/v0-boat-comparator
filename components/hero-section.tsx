@@ -9,7 +9,6 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-32">
       {/* Content */}
-
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -24,9 +23,8 @@ export function HeroSection() {
             className="mb-6"
           >
             <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary backdrop-blur-sm">
-              ✦ Plus de 500 bateaux disponibles 
+              ✦ Plus de 500 bateaux disponibles
             </span>
-      
           </motion.div>
 
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
@@ -41,12 +39,9 @@ export function HeroSection() {
             Yachts de luxe, voiliers élégants ou catamarans spacieux — 
             trouvez le bateau parfait pour votre prochaine aventure maritime.
           </p>
-
-
-        </motion.div> 
+        </motion.div>
 
         {/* Search form */}
-    {/*
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -85,10 +80,8 @@ export function HeroSection() {
             </div>
           </div>
         </motion.div>
-  */}
 
         {/* Stats */}
-  {/*
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -114,7 +107,6 @@ export function HeroSection() {
             </div>
           ))}
         </motion.div>
-     */}
       </div>
     </section>
   )
