@@ -197,7 +197,6 @@ export function Header() {
         */}
 
         {/* Mobile menu */}
-        {/*
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -218,7 +217,6 @@ export function Header() {
             </nav>
           </motion.div>
         )}
-        */}
       </div>
     </motion.header>
   )
