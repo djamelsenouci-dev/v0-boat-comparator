@@ -24,7 +24,7 @@ export function HeroSection() {
             className="mb-6"
           >
             <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary backdrop-blur-sm">
-              {/*  ✦ Plus de 500 bateaux disponibles */}
+              ✦ Plus de 500 bateaux disponibles 
             </span>
       
           </motion.div>
