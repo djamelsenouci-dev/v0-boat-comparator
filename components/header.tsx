@@ -184,7 +184,7 @@ export function Header() {
           */}
 
           {/* Mobile menu button */}
-          {/*
+          
           <Button
             variant="ghost"
             size="icon"
@@ -194,7 +194,7 @@ export function Header() {
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
-        */}
+        
 
         {/* Mobile menu */}
         {isMenuOpen && (
