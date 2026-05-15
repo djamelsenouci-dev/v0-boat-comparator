@@ -1,26 +1,130 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @media (prefers-color-scheme: light) {
-      .background { fill: black; }
-      .foreground { fill: white; }
-    }
-    @media (prefers-color-scheme: dark) {
-      .background { fill: white; }
-      .foreground { fill: black; }
-    }
-  </style>
-  <g clip-path="url(#clip0_7960_43945)">
-    <rect class="background" width="180" height="180" rx="37" />
-    <g style="transform: scale(95%); transform-origin: center">
-      <path class="foreground"
-        d="M101.141 53H136.632C151.023 53 162.689 64.6662 162.689 79.0573V112.904H148.112V79.0573C148.112 78.7105 148.098 78.3662 148.072 78.0251L112.581 112.898C112.701 112.902 112.821 112.904 112.941 112.904H148.112V126.672H112.941C98.5504 126.672 86.5638 114.891 86.5638 100.5V66.7434H101.141V100.5C101.141 101.15 101.191 101.792 101.289 102.422L137.56 66.7816C137.255 66.7563 136.945 66.7434 136.632 66.7434H101.141V53Z" />
-      <path class="foreground"
-        d="M65.2926 124.136L14 66.7372H34.6355L64.7495 100.436V66.7372H80.1365V118.47C80.1365 126.278 70.4953 129.958 65.2926 124.136Z" />
-    </g>
-  </g>
-  <defs>
-    <clipPath id="clip0_7960_43945">
-      <rect width="180" height="180" fill="white" />
-    </clipPath>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 450" width="400" height="450">
+<defs>
+<!-- Fond sombre -->
+<radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+<stop offset="0%" style="stop-color:#0d1b2a;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#060d15;stop-opacity:1"/>
+</radialGradient>
+<!-- Cercle extérieur gradient or -->
+<linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#c8a96e;stop-opacity:1"/>
+<stop offset="50%" style="stop-color:#f0d080;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#a07840;stop-opacity:1"/>
+</linearGradient>
+<!-- Vagues gradient bleu -->
+<linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#1a4a7a;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#2a6aaa;stop-opacity:1"/>
+</linearGradient>
+<linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#1e5588;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#3a7abf;stop-opacity:1"/>
+</linearGradient>
+<linearGradient id="waveGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#163d64;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#2a5f94;stop-opacity:1"/>
+</linearGradient>
+<!-- Soleil/Lune gradient chaud -->
+<radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+<stop offset="0%" style="stop-color:#fff8e0;stop-opacity:1"/>
+<stop offset="40%" style="stop-color:#ffd060;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#ff9020;stop-opacity:0"/>
+</radialGradient>
+<!-- Halo soleil -->
+<radialGradient id="haloGrad" cx="50%" cy="50%" r="50%">
+<stop offset="0%" style="stop-color:#ffd060;stop-opacity:0.4"/>
+<stop offset="100%" style="stop-color:#ff9020;stop-opacity:0"/>
+</radialGradient>
+<!-- Bateau gradient -->
+<linearGradient id="boatGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" style="stop-color:#c8d8e8;stop-opacity:1"/>
+<stop offset="50%" style="stop-color:#e8f0f8;stop-opacity:1"/>
+<stop offset="100%" style="stop-color:#a0b8cc;stop-opacity:1"/>
+</linearGradient>
+<!-- Clip cercle -->
+<clipPath id="circleClip">
+<circle cx="200" cy="185" r="118"/>
+</clipPath>
+<!-- Filtre lueur -->
+<filter id="glow">
+<feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+<feMerge>
+<feMergeNode in="coloredBlur"/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
+<filter id="softGlow">
+<feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+<feMerge>
+<feMergeNode in="coloredBlur"/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
+</defs>
+<!-- Fond -->
+<rect width="400" height="450" fill="url(#bgGrad)"/>
+<!-- Cercle principal fond sombre -->
+<circle cx="200" cy="185" r="125" fill="#0a1520"/>
+<!-- Cercle extérieur or -->
+<circle cx="200" cy="185" r="125" fill="none" stroke="url(#circleGrad)" stroke-width="2.5"/>
+<!-- Cercle intérieur fin -->
+<circle cx="200" cy="185" r="118" fill="none" stroke="url(#circleGrad)" stroke-width="0.5" <!-- Contenu clipé dans le cercle -->
+<g clip-path="url(#circleClip)">
+<!-- Fond dégradé intérieur -->
+<rect x="80" y="67" width="240" height="236" fill="url(#bgGrad)"/>
+<!-- Halo du soleil (lueur diffuse) -->
+<ellipse cx="200" cy="178" rx="45" ry="35" fill="url(#haloGrad)" filter="url(#softGlow)"/>
+<!-- Horizon ligne lumineuse -->
+<line x1="82" y1="195" x2="318" y2="195" stroke="#c8a96e" stroke-width="0.8" opacity="0.6"/>
+<!-- Soleil / lune -->
+<circle cx="200" cy="178" r="16" fill="url(#sunGrad)" filter="url(#glow)"/>
+<circle cx="200" cy="178" r="10" fill="#fff8e0" opacity="0.9"/>
+<!-- Vague 1 (arrière, plus petite) -->
+<path d="M82 210 Q110 200 130 208 Q155 216 175 207 Q195 198 215 207 Q240 216 265 207 Q290 fill="url(#waveGrad3)" opacity="0.8"/>
+<!-- Vague 2 (milieu) -->
+<path d="M82 218 Q105 207 128 215 Q152 223 173 214 Q193 205 213 214 Q238 223 262 213 Q287 fill="url(#waveGrad2)" opacity="0.9"/>
+<!-- Vague 3 (avant, plus grande) -->
+<path d="M82 228 Q102 214 125 223 Q150 233 170 222 Q190 211 210 222 Q235 233 260 221 Q285 fill="url(#waveGrad1)"/>
+<!-- Remplissage eau bas -->
+<rect x="82" y="238" width="236" height="70" fill="#1a4a7a"/>
+<!-- Bateau - coque -->
+<path d="M115 195 L135 188 L185 188 L205 195 L200 200 L120 200 Z"
+fill="url(#boatGrad)"/>
+<!-- Bateau - superstructure -->
+<path d="M135 188 L140 178 L170 178 L175 183 L185 188 Z"
+fill="#d0e0f0"/>
+<!-- Bateau - cabine -->
+<rect x="143" y="174" width="22" height="9" rx="2" fill="#e0eaf5"/>
+<!-- Ligne de flottaison -->
+<line x1="118" y1="200" x2="202" y2="200" stroke="#c8a96e" stroke-width="0.8" opacity="0.7"/>
+<!-- Reflet bateau sur eau -->
+<path d="M120 202 L135 205 L185 205 L200 202" stroke="#a0c0d8" stroke-width="0.5" fill="none" </g>
+<!-- Ligne décorative sous le cercle -->
+<line x1="120" y1="318" x2="280" y2="318" stroke="url(#circleGrad)" stroke-width="0.8" opacity="<!-- Titre UMIHEISEIN -->
+<text x="200" y="355"
+font-family="'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif"
+font-size="30"
+font-weight="300"
+letter-spacing="10"
+fill="url(#circleGrad)"
+text-anchor="middle">UMIHEISEN</text>
+<!-- Ligne décorative sous titre -->
+<line x1="140" y1="368" x2="185" y2="368" stroke="url(#circleGrad)" stroke-width="0.6" opacity="<!-- Vague déco centrale -->
+<path d="M190 368 Q195 364 200 368 Q205 372 210 368" stroke="url(#circleGrad)" stroke-width="<line x1="215" y1="368" x2="260" y2="368" stroke="url(#circleGrad)" stroke-width="0.6" opacity="<!-- Sous-titre -->
+<text x="200" y="392"
+font-family="'Palatino Linotype', Georgia, serif"
+font-size="10"
+font-weight="300"
+letter-spacing="6"
+fill="#8aaScc"
+text-anchor="middle"
+opacity="0.8">MER • HORIZON • ÉVASION</text>
+<!-- Caractères japonais discrets -->
+<text x="200" y="420"
+font-family="Georgia, serif"
+font-size="11"
+letter-spacing="4"
+fill="#c8a96e"
+text-anchor="middle"
+opacity="0.4">海平線</text>
 </svg>
