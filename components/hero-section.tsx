@@ -9,8 +9,6 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-32">
       {/* Content */}
-
-    
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -18,7 +16,7 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
           className="text-center -mt-24"
         >
- 
+          {/*
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -30,10 +28,9 @@ export function HeroSection() {
             </span>
       
           </motion.div>
-    
-
+        */}
+          
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
-      
             <span className="block">Naviguez en</span>
             <span className="block bg-gradient-to-r from-primary via-champagne to-gold-light bg-clip-text text-transparent">
               Méditerranée
@@ -45,8 +42,6 @@ export function HeroSection() {
             Yachts de luxe, voiliers élégants ou catamarans spacieux — 
             trouvez le bateau parfait pour votre prochaine aventure maritime.
           </p>
-
-
         </motion.div> 
 
         {/* Search form */}
@@ -121,5 +116,4 @@ export function HeroSection() {
      */}
       </div>
     </section>
-  )
-}
+    }
