@@ -29,9 +29,10 @@ export function HeroSection() {
             </span>
       
           </motion.div>
-    */}
+    
 
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
+      */}
             <span className="block">Naviguez en</span>
             <span className="block bg-gradient-to-r from-primary via-champagne to-gold-light bg-clip-text text-transparent">
               Méditerranée
