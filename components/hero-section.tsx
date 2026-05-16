@@ -1,4 +1,5 @@
 "use client"
+<meta name='impact-site-verification' value='bf4ff7e7-4dad-46b0-8468-81186fb4ada4'>
 
 import { motion } from "framer-motion"
 import { Search, MapPin, Calendar, Users } from "lucide-react"
