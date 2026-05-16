@@ -36,6 +36,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-background">
+      {/* Verifcation IMPACT */}
+        <head>
+        <meta
+          name="impact-site-verification"
+          content="cd75c5d6-d273-456e-adfc-aa1498cb4c10"
+        />
+      </head>
       <body className="font-sans antialiased bg-background text-foreground">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
